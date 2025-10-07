@@ -1,0 +1,233 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    font-size: 62.5%; 
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: #333333;
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+ul { 
+    list-style: none;
+}
+
+.container { 
+    max-width: 120rem; 
+    margin: 0 auto; 
+    padding: 0 2rem;
+}
+
+.cabecalho, .rodape {
+    background-color: #02A28F;
+    color: #ffffff;
+    padding: 1.5rem 0;
+}
+
+.cabecalho .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { 
+    font-size: 2.4rem; 
+    font-weight: 700; 
+}
+
+.rodape { 
+    text-align: center; 
+    font-size: 1.2rem; 
+}
+
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.post-destaque {
+    position: relative;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    height: 39.6rem;
+    border-radius: 1rem;
+    background-image: url(../img/banner-article.svg);
+    width: auto;     
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+
+}
+
+
+.secao-header {
+    background-color: #02A28F; 
+    color: #ffffff; 
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.secao-header h3 { 
+    font-size: 1.8rem; 
+}
+
+.secao-header a { 
+    font-size: 1.2rem; 
+}
+
+
+.grid-posts {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    background-color: #ffffff; 
+    padding: 2rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.post-card {
+    border: 1px solid #eeeeee;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background-color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card img {
+    width: 100%;
+    height: 19.1rem;
+    object-fit: cover; 
+}
+
+.card-conteudo {
+    padding: 1.5rem;
+    flex-grow: 1; 
+}
+
+.card-conteudo .tag { 
+    color: #02A28F; 
+    font-weight: 600; 
+    font-size: 1.2rem; 
+}
+
+.card-conteudo h4 { 
+    font-size: 1.8rem; 
+    margin: 0.5rem 0; 
+    color: #000000;
+}
+
+.card-conteudo p { 
+    font-size: 1.3rem; 
+    line-height: 1.6; 
+    margin-bottom: 1rem; 
+}
+
+.card-conteudo .autor, .card-conteudo time { 
+    font-size: 1.2rem; 
+    color: #888888; 
+    display: block; 
+}
+
+.sidebar .widget { 
+    margin-bottom: 3rem; 
+}
+
+.widget ul { 
+    background-color: #ffffff; 
+    padding: 2rem; 
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.lista-posts-populares li { 
+    display: flex; 
+    align-items: center; 
+    gap: 1.5rem; 
+    margin-bottom: 1.5rem; 
+    background-color: #FFFFFF;
+    height: 9.6rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.lista-posts-populares li:last-child { 
+    margin-bottom: 0; 
+}
+
+.lista-posts-populares img { 
+    width: 13.2rem; 
+    height: 7rem; 
+    border-radius: 1rem; 
+    object-fit: cover; 
+}
+
+.lista-posts-populares h4 { 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+}
+
+.lista-posts-populares time { 
+    font-size: 1.2rem; 
+    color: #888888; 
+}
+
+.lista-categorias li a { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1rem 0; 
+    border-bottom: 1px solid #f0f0f0; 
+    font-weight: 600; 
+}
+
+.lista-categorias li:last-child a { 
+    border-bottom: none; 
+}
+
+.lista-categorias span { 
+    color: #888888; 
+    font-weight: 400; 
+}
+
+/* Para Tablets (telas entre 768px e 1023px de largura) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid-posts {
+        grid-template-columns: 1fr 1fr; /* A grade de posts passa a ter 2 colunas */
+    }
+}
+
+/* Para Desktops (telas a partir de 1024px de largura) */
+@media (min-width: 1024px) {
+    .page-wrapper {
+        grid-template-columns: 2fr 1fr; /* Ativa o layout com sidebar */
+    }
+
+    .grid-posts {
+        grid-template-columns: 1fr 1fr; /* A grade de posts continua com 2 colunas */
+    }
+}
